@@ -1,0 +1,45 @@
+{% extends 'store/store_base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Django web stor index page
+{% endblock title %}
+
+{% block content %}
+
+
+<div class="row">
+
+    {% for item in products %}
+    <div class="card" style="width: 18rem;">
+        {% comment %} <img src="{{ item.image.url }}"/> {% endcomment %}
+        <div class="card-body">
+            <h5 class="card-title">{{ item.name }}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="row">
+            <a href="update/{{ item.id }}">
+            <div class="btn btn-success col-5">UPDATE</div>
+            </a>
+            
+            <a href="#" class="btn btn-primary col-5 float-start">Add to cart</a>
+
+            <a href="delete/{{ item.id }}">
+            <div class="btn btn-danger col-5">DELETE</div>
+            </a>
+
+                <span class="col-6 float-end">
+                    <strong>{{ item.price | floatformat:2 }}</strong>
+                </span>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    
+    
+    
+</div>
+
+
+
+{% endblock content %}

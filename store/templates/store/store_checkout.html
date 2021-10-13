@@ -1,0 +1,44 @@
+{% extends 'store/store_base.html' %}
+
+{% block title %}
+    Django web checkout page
+{% endblock title %}
+
+{% block content %}
+
+    <span class="float-start mt-3 mb-3">
+        <strong>
+            Items: 22<br/>
+            Total: 222
+        </strong>
+    </span>
+
+    <button type="button" class="btn btn-primary float-end mt-3 mb-3">Checkout</button>
+
+    <table class="table mt-3 text-center">
+        <thead class="table-dark ">
+            <tr>
+            <th scope="col">Order</th>
+            <th scope="col">Product name</th>
+            <th scope="col ">Quantity</th>
+            <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>
+                    <button type="button" class="btn btn-outline-dark">+</button>
+                        Otto
+                    <button type="button" class="btn btn-outline-dark">-</button>
+                </td>
+                <td>@mdo</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    
+
+{% endblock content %}

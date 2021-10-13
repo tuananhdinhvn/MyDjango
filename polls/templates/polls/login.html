@@ -1,0 +1,29 @@
+{% extends 'polls/base.html' %}
+
+{% block title %}
+    customer login
+{% endblock title %}
+
+{% block content %}
+<div class="card">
+    <div class="container">
+        <h1>login page</h1>
+        <div>
+            <form class="mx-auto" method="POST" action="">
+            
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Username</label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                {% csrf_token %}
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

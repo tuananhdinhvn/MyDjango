@@ -1,0 +1,17 @@
+{% extends 'polls/base.html' %}
+
+{% block title %}
+    home page
+{% endblock title %}
+
+{% block content %}
+<div>
+    <h1>hello world</h1>
+    <div>
+        {% for item in object_list %}
+            <h2>{{ item.username }}</h2>
+            <p>{{ item.email }}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

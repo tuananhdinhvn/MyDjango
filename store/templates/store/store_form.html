@@ -1,0 +1,21 @@
+{% extends 'store/store_base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Product form
+{% endblock title %}
+
+{% block content %}
+
+<div class="row">
+
+    <form method="POST" action="">
+        {{ productForm.as_p }}
+        <input type="submit" value="Submit"/>
+        {% csrf_token %}
+    </form>
+    
+</div>
+
+{% endblock content %}

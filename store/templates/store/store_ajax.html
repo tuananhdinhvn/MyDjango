@@ -1,0 +1,60 @@
+{% extends 'store/store_base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Ajax Django
+{% endblock title %}
+
+{% block content %}
+
+<style>
+    .close-btn{
+        padding: 8px;
+        color: white;
+        background: red;
+        border-radius: 100%;
+        width: 20px;
+        height: 10px;
+        margin-right: 20px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .form-content-result{
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+
+<div class="row">
+
+    <form id="creatProductForm" method="POST" action="" data-url="{% url 'store_ajax' %}">
+        {% csrf_token %}
+        {{form}}
+        <input id="createProductBtn" type="button" value="submit" class="btn btn-outline-success"/>
+    </form>
+    
+</div>
+
+<br/><br/>
+
+<div id="product-list">
+
+    {% for product in products %}
+        <p><span class="close-btn">X</span><span class="form-content-result">{{ product.name }} - {{ product.price | floatformat:2 }}</span></p>
+    {% endfor %}
+
+</div>
+
+{% comment %} <script src="{% static 'store/js/jquery-3.6.0.js' %}"></script> {% endcomment %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+<script src="{% static 'store/js/store_ajax.js' %}"></script>
+
+
+{% endblock content %}
