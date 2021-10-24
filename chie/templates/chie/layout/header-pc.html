@@ -1,0 +1,167 @@
+{% load static %}
+
+
+<header id="qodef-page-header">
+    <div id="qodef-page-header-inner">
+        <a itemprop="url" class="qodef-header-logo-link qodef-height--set" href="{% url 'chie:chie_index' %}" style="height: 58px;" rel="home">
+            <img
+                width="330"
+                height="116"
+                src="{% static 'chie/img/chie_logo.jpg' %}"
+                class="qodef-header-logo-image qodef--main"
+                alt="logo main"
+                itemprop="image"
+                sizes="(max-width: 330px) 100vw, 330px"
+            />
+        </a>
+        <nav class="qodef-header-navigation" role="navigation" aria-label="Top Menu">
+            <ul id="menu-centered-1" class="menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-875 qodef-menu-item--narrow">
+                    <a href="{% url 'chie:chie_index' %}"><span class="qodef-menu-item-text">Home</span></a>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-884 qodef-menu-item--narrow">
+                    <a href="{% url 'chie:chie_index' %}/about-us"><span class="qodef-menu-item-text">Our story</span></a>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-895 qodef-menu-item--wide">
+                    <a href="{% url 'chie:chie_index' %}/our-team"><span class="qodef-menu-item-text">Our team</span></a>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2471 qodef-menu-item--wide">
+                    <a href="{% url 'chie:chie_index' %}/shop"><span class="qodef-menu-item-text">Cllections</span></a>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-894 qodef-menu-item--narrow">
+                    <a href="{% url 'chie:chie_index' %}/blog"><span class="qodef-menu-item-text">Advisory</span></a>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-893 qodef-menu-item--narrow">
+                    <a href="{% url 'chie:chie_index' %}/contact"><span class="qodef-menu-item-text">Contact</span></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="qodef-widget-holder">
+
+
+            <div class="widget widget_konsept_membership_login_opener" data-area="standard-centered-right">
+                <div class="qodef-login-opener-widget qodef-user-logged--out" style="margin: 0px 15px 0px 0px;">
+                    <a href="#" class="qodef-login-opener">
+                        <span class="qodef-login-opener-icon"></span>
+                        <span class="qodef-login-opener-text">Login / Register</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="widget widget_konsept_core_woo_side_area_cart" data-area="standard-centered-right">
+                <div class="qodef-woo-side-area-cart qodef-m" style="padding: 5px 14px 0 11px;">
+                    <div class="qodef-woo-side-area-cart-inner qodef-m-inner">
+                        <a class="qodef-m-opener" href="javascript: void(0)">
+                            <span class="qodef-m-opener-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="qodef-dropdown-cart-svg" width="19.816" height="18" viewBox="51.878 -0.952 19.816 18">
+                                    <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M57.33-.197L54.843 3.12v11.61c0 .916.742 1.658 1.659 1.658h11.609c.917 0 1.659-.742 1.659-1.658V3.12L67.283-.197H57.33zM54.843 3.12h14.928M65.624 6.438a3.317 3.317 0 11-6.634 0" />
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="qodef-m-opener-count">9</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="widget widget_konsept_core_side_area_opener" data-area="standard-centered-right">
+                <a href="javascript:void(0)" class="qodef-opener-icon qodef-m qodef-source--svg-path qodef-side-area-opener" style="margin: 0px 0px 4px 0px;">
+                    <span class="qodef-m-icon qodef--open">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            width="28.229px"
+                            height="13.188px"
+                            viewBox="0 0 28.229 13.188"
+                            enable-background="new 0 0 28.229 13.188"
+                            xml:space="preserve"
+                        >
+                            <line fill="none" stroke="#1D1D1D" stroke-miterlimit="10" x1="28.087" y1="0.625" x2="0.122" y2="0.625"></line>
+                            <line fill="none" stroke="#1D1D1D" stroke-miterlimit="10" x1="28.087" y1="6.625" x2="0.122" y2="6.625"></line>
+                            <line fill="none" stroke="#1D1D1D" stroke-miterlimit="10" x1="28.087" y1="12.625" x2="0.122" y2="12.625"></line>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="qodef-header-sticky">
+        <div class="qodef-header-sticky-inner">
+            <a itemprop="url" class="qodef-header-logo-link qodef-height--set" href="{% url 'chie:chie_index' %}" style="height: 58px;" rel="home">
+                <img
+                    width="330"
+                    height="116"
+                    src="{% static 'chie/img/chie_logo.jpg' %}"
+                    class="qodef-header-logo-image qodef--main"
+                    alt="logo main"
+                    itemprop="image"
+                    srcset="{% static 'chie/img/chie_logo.jpg' %} 330w, {% static 'chie/img/chie_logo.jpg' %} 300w"
+                    sizes="(max-width: 330px) 100vw, 330px"
+                />
+            </a>
+            <nav class="qodef-header-navigation" role="navigation" aria-label="Top Menu">
+                <ul id="menu-centered-2" class="menu">
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-875 qodef-menu-item--narrow">
+                        <a href="{% url 'chie:chie_index' %}"><span class="qodef-menu-item-text">Home</span></a>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-884 qodef-menu-item--narrow">
+                        <a href="{% url 'chie:chie_index' %}/about-us"><span class="qodef-menu-item-text">About us</span></a>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-895 qodef-menu-item--wide">
+                        <a href="{% url 'chie:chie_index' %}/our-team"><span class="qodef-menu-item-text">Our team</span></a>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2471 qodef-menu-item--wide">
+                        <a href="{% url 'chie:chie_index' %}/shop"><span class="qodef-menu-item-text">Collections</span></a>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-894 qodef-menu-item--narrow">
+                        <a href="{% url 'chie:chie_index' %}/blog"><span class="qodef-menu-item-text">Advisory</span></a>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-893 qodef-menu-item--narrow">
+                        <a href="{% url 'chie:chie_index' %}/contact"><span class="qodef-menu-item-text">Contact</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="qodef-widget-holder qodef--one">
+                <div id="konsept_membership_login_opener-5" class="widget widget_konsept_membership_login_opener qodef-sticky-right">
+                    <div class="qodef-login-opener-widget qodef-user-logged--out" style="margin: 0px 0px 0px 0px;">
+                        <a href="#" class="qodef-login-opener">
+                            <span class="qodef-login-opener-icon"></span>
+                            <span class="qodef-login-opener-text">Login / Register</span>
+                        </a>
+                    </div>
+                </div>
+                <div id="konsept_core_separator-18" class="widget widget_konsept_core_separator qodef-sticky-right">
+                    <div class="qodef-shortcode qodef-m qodef-separator clear">
+                        <div class="qodef-m-line" style="border-style: solid;"></div>
+                    </div>
+                </div>
+                <div id="konsept_core_woo_side_area_cart-8" class="widget widget_konsept_core_woo_side_area_cart qodef-sticky-right">
+                    <div class="qodef-woo-side-area-cart qodef-m" style="padding: 6px 0px 0px 6px;">
+                        <div class="qodef-woo-side-area-cart-inner qodef-m-inner">
+                            <a class="qodef-m-opener" href="javascript: void(0)">
+                                <span class="qodef-m-opener-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="qodef-dropdown-cart-svg" width="19.816" height="18" viewBox="51.878 -0.952 19.816 18">
+                                        <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M57.33-.197L54.843 3.12v11.61c0 .916.742 1.658 1.659 1.658h11.609c.917 0 1.659-.742 1.659-1.658V3.12L67.283-.197H57.33zM54.843 3.12h14.928M65.624 6.438a3.317 3.317 0 11-6.634 0" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span class="qodef-m-opener-count">9</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+

@@ -45,17 +45,23 @@ TINYMCE_DEFAULT_CONFIG = {
     "fullscreen  preview save | insertfile image media pageembed template link anchor codesample | "
     "a11ycheck ltr rtl | showcomments addcomment code",
     "custom_undo_redo_levels": 10,
-    "language": "en_EN",  # To force a specific language instead of the Django current language.
-
-    
+    "language": "en_EN",  # To force a specific language instead of the Django current language. 
 }
 
 
-
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
 
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
     'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -66,7 +72,10 @@ INSTALLED_APPS = [
     'polls',
     'tinymce',
 
-    'store.apps.StoreConfig'
+    'store.apps.StoreConfig',
+    'core.apps.CoreConfig',
+
+    'chie.apps.ChieConfig',
 
 ]
 
@@ -270,6 +279,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+SITE_ID = 1
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/

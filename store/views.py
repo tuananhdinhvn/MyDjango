@@ -6,11 +6,34 @@ from .form import ProductForm
 from django.http import JsonResponse
 from django.forms.models import model_to_dict
 
+import bs4
+import requests
+import urllib.request
+
+
+# with open('template/store/store_index.html') as html_file:
+#     content = html_file.read()
+#     print(content)
+
 
 def storeindex_view(request):
+    link = 'https://coinmarketcap.com/'
+    htmldoc = requests.get(link).text
+
+    soup = bs4.BeautifulSoup(htmldoc, 'html.parser')
+
+    vnlink = soup.title
+
+    data = ''
+
+    for link in vnlink:
+        data = link.get_text()
+
     products = Product.objects.all()
-    context = {'products': products}
+    context = {'products': products, 'data': data}
     return render(request, 'store/store_index.html', context)
+
+
 
 def storecart_view(request):
     context = {}

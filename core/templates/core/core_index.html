@@ -1,0 +1,25 @@
+{% extends "core/core_base.html" %}
+
+{% block title %}
+    Core index page
+{% endblock title %}
+
+{% block content %}
+    <div class='row text-center pt-3'>
+
+        {% for item in object_list %}
+            <div class="card" style="width: 18rem;">
+                <img src="https://lp-cms-production.imgix.net/2020-10/shutterstockRF_433429591.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850" class="card-img-top rounded " alt="">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.title }}</h5>
+                    <p class="card-text"><span {% if item.discount_price %} style="text-decoration: line-through;" {% endif %}> {{ item.price|floatformat:2 }}</span>{% if item.discount_price %} | <span>{{ item.discount_price|floatformat:2 }}</span>{% endif %}</p>
+                    <div>
+                        <a href="{{ item.get_absolute_url }}" class='btn btn-{{ item.get_color_label_display }}'>view detail</a>
+                        <a href="{{ item.get_core_add_to_cart }}" class='btn btn-primary'>Add to cart</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock content %}

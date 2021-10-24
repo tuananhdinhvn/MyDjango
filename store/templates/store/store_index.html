@@ -11,9 +11,8 @@
 
 <div class="row">
 
-    {% for item in products %}
+    {% comment %} {% for item in products %}
     <div class="card" style="width: 18rem;">
-        {% comment %} <img src="{{ item.image.url }}"/> {% endcomment %}
         <div class="card-body">
             <h5 class="card-title">{{ item.name }}</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -34,10 +33,14 @@
             </div>
         </div>
     </div>
-    {% endfor %}
+    {% endfor %} {% endcomment %}
     
     
     
+</div>
+
+<div>
+<p> {{ data }} </p>
 </div>
 
 

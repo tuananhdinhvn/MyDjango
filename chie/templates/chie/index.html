@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+    {% include 'chie/layout/head-seo.html' %}
+    
+</head>
+
+<body class="page-template page-template-page-full-width page-template-page-full-width-php page page-id-64 theme-konsept qode-framework-1.1.2 woocommerce-no-js qodef-qi--no-touch qi-addons-for-elementor-1.2.2 qodef-back-to-top--enabled  qodef-content-grid-1300 qodef-header--standard qodef-header-appearance--sticky qodef-mobile-header--standard qodef-drop-down-second--full-width qodef-drop-down-second--animate-height qodef-product-single--layout konsept-core-1.1 konsept-membership-1.0 konsept-1.1.1 qodef-header-standard--left qodef-search--covers-header elementor-default elementor-kit-15 elementor-page elementor-page-64" itemscope itemtype="https://schema.org/WebPage">
+    
+    <div id="qodef-page-wrapper" class="">
+
+        {% include 'chie/layout/header-pc.html' %}
+
+        {% include 'chie/layout/header-mobile.html' %}
+
+
+        <div id="qodef-page-outer">
+            <div id="qodef-page-inner" class="qodef-content-full-width">
+                <main id="qodef-page-content" class="qodef-grid qodef-layout--template">
+                    <div class="qodef-grid-inner clear">
+                        <div class="qodef-grid-item qodef-page-content-section qodef-col--12">
+                            <div data-elementor-type="wp-page" data-elementor-id="64" class="elementor elementor-64" data-elementor-settings="[]">
+                                <div class="elementor-inner">
+                                    <div class="elementor-section-wrap">
+
+                                        {% include 'chie/layout/home-slider.html' %}
+
+                                        {% include 'chie/layout/home-banner-intro.html' %}
+
+                                        {% include 'chie/layout/home-feature-product.html' %}
+
+                                        {% include 'chie/layout/home-event.html' %}
+
+                                        {% include 'chie/layout/home-brand.html' %}
+
+                                        {% include 'chie/layout/home-services.html' %}
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+
+        {% include 'chie/layout/footer.html' %}
+
+        {% comment %} Back to top {% endcomment %}
+        {% comment %} <a id="qodef-back-to-top" href="#">
+            <span class="qodef-back-to-top-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10.749" height="19.997" viewBox="23.25 0 10.749 19.997">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M33.232 19.181l-9.215-9.215L33.232.75" />
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M33.232 19.181l-9.215-9.215L33.232.75" />
+                </svg>
+            </span>
+        </a>  {% endcomment %}
+        {% comment %} end back to top {% endcomment %}
+        
+
+        {% include 'chie/layout/customer-login.html' %}
+
+        {% include 'chie/layout/script-end-page.html' %}
+
+    </div>
+
+
+</body>
+
+
+
+</html>
+
+
+
